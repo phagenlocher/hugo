@@ -122,7 +122,7 @@ require (
 	github.com/aws/smithy-go v1.22.2 // indirect
 	github.com/bluele/gcache v0.0.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.6 // indirect
-	github.com/dlclark/regexp2 v1.11.4 // indirect
+	github.com/dlclark/regexp2 v1.11.5 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -175,3 +175,5 @@ require (
 )
 
 go 1.23.0
+
+replace github.com/alecthomas/chroma/v2 => ./chroma
