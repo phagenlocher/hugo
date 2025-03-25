@@ -37,6 +37,7 @@ import (
 	"github.com/yuin/goldmark/renderer"
 	"github.com/yuin/goldmark/renderer/html"
 	"github.com/yuin/goldmark/text"
+	katex "github.com/FurqanSoftware/goldmark-katex"
 
 	"github.com/gohugoio/hugo/markup/converter"
 	"github.com/gohugoio/hugo/markup/tableofcontents"
@@ -195,6 +196,8 @@ func newMarkdown(pcfg converter.ProviderConfig) goldmark.Markdown {
 	if cfg.Parser.Attribute.Block || cfg.Parser.AutoHeadingID || cfg.Parser.AutoDefinitionTermID {
 		extensions = append(extensions, attributes.New(cfg.Parser))
 	}
+
+	extensions = append(extensions, &katex.Extender{})
 
 	md := goldmark.New(
 		goldmark.WithExtensions(
